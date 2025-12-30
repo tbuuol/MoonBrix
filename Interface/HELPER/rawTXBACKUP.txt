@@ -1,0 +1,70 @@
+createrawtransaction "[{\"txid\":\"myid\",\"vout\":0}]" "{\"data\":\"00010203\", \"address\":0.01}"
+
+
+
+
+# claim IP 0.0.0.1.MoonBrix
+createrawtransaction "[{\"txid\":\"a68d0e0e5534a6a6d43f3d70ecb089cc4b639af2056831e22121b6cb8b6ad71c\",\"vout\":1}]" "{\"data\":\"004D6F6F6E42726978000000010000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":9.9986765}"
+
+
+# try claim IP 0.0.0.1.MoonBrix again -> prevented, IPs are unique within TLD!
+createrawtransaction "[{\"txid\":\"15a8eb466c328d11e444b3bdfb404cca860c0ea9f90ca7b91246886eb5b5c41a\",\"vout\":1}]" "{\"data\":\"004D6F6F6E42726978000000010000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":9.9976765}"
+
+# try claim MoonBrix again by using empty Byte as last -> prevented, Names are unique!
+createrawtransaction "[{\"txid\":\"dfcb74bc5ba09128cf0c3480961336976a630f0423e7213019e19af0c1234496\",\"vout\":1}]" "{\"data\":\"4D6F6F6E4272697800000000000000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":9.9966765}"
+
+# try activation again -> prevented, activation is unique!
+createrawtransaction "[{\"txid\":\"e8d51b47b1ab0b28a2c3909e520e1d1c30b389c6eecf9822ee14f468855b9ca7\",\"vout\":1}]" "{\"data\":\"000000000000000000000000000000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":9.9956765}"
+
+
+# change Owner IP, worked
+createrawtransaction "[{\"txid\":\"17d9e7706c8b3fef8ba2af58c7a6f4b854012ad42b4be1786ae51f969b16987b\",\"vout\":1}]" "{\"data\":\"004D6F6F6E42726978000000010100\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":9.9946765}"
+
+# change Type TLD, prevented -> not performed by owner
+createrawtransaction "[{\"txid\":\"190b1139c282e4f9158368443b6896af1c40ec4f3a2b5b2662e9afe83596d906\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000001020001\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":9.9936765}"
+
+# change Type TLD, prevented -> IP isnt net IP
+createrawtransaction "[{\"txid\":\"512ddfb84cb5fa5175123b4ddca41d36f1243a377eeb605e63e1068d46b33d12\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000020001\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":7.9990000}"
+
+# change Type TLD, worked
+createrawtransaction "[{\"txid\":\"390f99fb7508292c4aeae17ab9b51fbf595c4d733e53181d69359bf4549ff9cd\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000020001\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":7.9980000}"
+
+# change Owner TLD, worked
+createrawtransaction "[{\"txid\":\"3636a2efdad5de84785d1c27a8805ad520965d32dc7f839a9e792ceb304bb542\",\"vout\":1}]" "{\"data\":\"004D6F6F6E42726978000000000100\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9970000}"
+
+# add address to list, worked
+createrawtransaction "[{\"txid\":\"bf304404f61973543a402bae69fc84c884b6fdbc1ea4a4e2f9b013533639c366\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030000\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9950000, \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":0.0010000}"
+
+# remove address from list, worked
+createrawtransaction "[{\"txid\":\"eaf50ebc0f3f7c53ad043080f32086765f911dc030b13e98f89cac6e151de6e7\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030001\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9930000, \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":0.0010000}"
+
+# add address to list x2 for clear List Test
+createrawtransaction "[{\"txid\":\"e40510881b6c17b4a93c94a7ef1280a91c8eb802181b1b0deaf605011cd5e8b2\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030000\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9910000, \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":0.0010000}"
+createrawtransaction "[{\"txid\":\"551f658c8e0064fe8130ce0ddba9e5a3f862e47d32b841ee7134d806a0c3fdfa\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030000\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9890000, \"KjhPcp9CN1kkLhgm6288rXie5dVGJabHsd\":0.0010000}"
+
+# clear list, worked
+createrawtransaction "[{\"txid\":\"39fc57d85c60cef003ed6a25e86fcca8b2e35b45fe6c8b6da0f254a707fd16ff\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030002\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9870000}"
+
+
+
+### update change owner to follow output logic with min spending amount !!!!
+### DONE - ALL DATA OUTDATED
+
+### MoonBrix is activated, TLD MoonBrix itself claimed, IP 0.0.0.1 claimed, and listtype changed to blacklist
+
+# add address to list, worked
+createrawtransaction "[{\"txid\":\"595400b25e01b05fb33ac4b282112d4329ce1e6b682d21be8a8bc8b7b2514b06\",\"vout\":0}]" "{\"data\":\"004D6F6F6E4272697800000000030000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":1.99147650, \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":0.0010000}"
+
+# change IP Name
+createrawtransaction "[{\"txid\":\"fc584791d1f42fcf9500f1a21ba9047703e1475d440a1d904ef8f5ebe8c4b8e7\",\"vout\":1}]" "{\"data\":\"004D6F6F6E427269780000000104004D6F6E6F\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":1.98947650}"
+
+
+# Inscribe overload, Kotia max OP_RETURN size between 28000 & 30720, try 30720 -> fail, try 28672 -> Wallet Fail ?! Create new Wallet
+createrawtransaction "[{\"txid\":\"cbbf04b69d05c486ffbee8794a1de77a87df42848efe79855b1bbeaafc3ac871\",\"vout\":1}]" "{\"data\":\"\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":1.98647650}"
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+[
+    {
+        "Key": "004d6f6f6e4272697800000001",
+        "Owner": "KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx",
+        "root": {}
+    },
+    {
+        "Key": "004d6f6f6e4272697813374284",
+        "Owner": "KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1",
+        "root": {
+            "M": "",
+            "www": {
+                "Genesis": "53dcdbe9c0d44d8e92cd04c9c8b62ba90644f8056a8d8c2a2742ad36c78a7e01"
+            }
+        }
+    }
+]

@@ -1,0 +1,146 @@
+createrawtransaction "[{\"txid\":\"myid\",\"vout\":0}]" "{\"data\":\"00010203\", \"address\":0.01}"
+
+
+
+
+# claim IP 0.0.0.1.MoonBrix
+createrawtransaction "[{\"txid\":\"a68d0e0e5534a6a6d43f3d70ecb089cc4b639af2056831e22121b6cb8b6ad71c\",\"vout\":1}]" "{\"data\":\"004D6F6F6E42726978000000010000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":9.9986765}"
+
+
+# try claim IP 0.0.0.1.MoonBrix again -> prevented, IPs are unique within TLD!
+createrawtransaction "[{\"txid\":\"15a8eb466c328d11e444b3bdfb404cca860c0ea9f90ca7b91246886eb5b5c41a\",\"vout\":1}]" "{\"data\":\"004D6F6F6E42726978000000010000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":9.9976765}"
+
+# try claim MoonBrix again by using empty Byte as last -> prevented, Names are unique!
+createrawtransaction "[{\"txid\":\"dfcb74bc5ba09128cf0c3480961336976a630f0423e7213019e19af0c1234496\",\"vout\":1}]" "{\"data\":\"4D6F6F6E4272697800000000000000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":9.9966765}"
+
+# try activation again -> prevented, activation is unique!
+createrawtransaction "[{\"txid\":\"e8d51b47b1ab0b28a2c3909e520e1d1c30b389c6eecf9822ee14f468855b9ca7\",\"vout\":1}]" "{\"data\":\"000000000000000000000000000000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":9.9956765}"
+
+
+# change Owner IP, worked
+createrawtransaction "[{\"txid\":\"17d9e7706c8b3fef8ba2af58c7a6f4b854012ad42b4be1786ae51f969b16987b\",\"vout\":1}]" "{\"data\":\"004D6F6F6E42726978000000010100\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":9.9946765}"
+
+# change Type TLD, prevented -> not performed by owner
+createrawtransaction "[{\"txid\":\"190b1139c282e4f9158368443b6896af1c40ec4f3a2b5b2662e9afe83596d906\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000001020001\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":9.9936765}"
+
+# change Type TLD, prevented -> IP isnt net IP
+createrawtransaction "[{\"txid\":\"512ddfb84cb5fa5175123b4ddca41d36f1243a377eeb605e63e1068d46b33d12\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000020001\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":7.9990000}"
+
+# change Type TLD, worked
+createrawtransaction "[{\"txid\":\"390f99fb7508292c4aeae17ab9b51fbf595c4d733e53181d69359bf4549ff9cd\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000020001\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":7.9980000}"
+
+# change Owner TLD, worked
+createrawtransaction "[{\"txid\":\"3636a2efdad5de84785d1c27a8805ad520965d32dc7f839a9e792ceb304bb542\",\"vout\":1}]" "{\"data\":\"004D6F6F6E42726978000000000100\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9970000}"
+
+# add address to list, worked
+createrawtransaction "[{\"txid\":\"bf304404f61973543a402bae69fc84c884b6fdbc1ea4a4e2f9b013533639c366\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030000\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9950000, \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":0.0010000}"
+
+# remove address from list, worked
+createrawtransaction "[{\"txid\":\"eaf50ebc0f3f7c53ad043080f32086765f911dc030b13e98f89cac6e151de6e7\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030001\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9930000, \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":0.0010000}"
+
+# add address to list x2 for clear List Test
+createrawtransaction "[{\"txid\":\"e40510881b6c17b4a93c94a7ef1280a91c8eb802181b1b0deaf605011cd5e8b2\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030000\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9910000, \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":0.0010000}"
+createrawtransaction "[{\"txid\":\"551f658c8e0064fe8130ce0ddba9e5a3f862e47d32b841ee7134d806a0c3fdfa\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030000\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9890000, \"KjhPcp9CN1kkLhgm6288rXie5dVGJabHsd\":0.0010000}"
+
+# clear list, worked
+createrawtransaction "[{\"txid\":\"39fc57d85c60cef003ed6a25e86fcca8b2e35b45fe6c8b6da0f254a707fd16ff\",\"vout\":1}]" "{\"data\":\"004D6F6F6E4272697800000000030002\", \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":7.9870000}"
+
+
+
+### update change owner to follow output logic with min spending amount !!!!
+### DONE - ALL DATA OUTDATED
+
+### MoonBrix is activated, TLD MoonBrix itself claimed, IP 0.0.0.1 claimed, and listtype changed to blacklist
+
+# add address to list, worked
+createrawtransaction "[{\"txid\":\"595400b25e01b05fb33ac4b282112d4329ce1e6b682d21be8a8bc8b7b2514b06\",\"vout\":0}]" "{\"data\":\"004D6F6F6E4272697800000000030000\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":1.99147650, \"Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk\":0.0010000}"
+
+# change IP Name
+createrawtransaction "[{\"txid\":\"fc584791d1f42fcf9500f1a21ba9047703e1475d440a1d904ef8f5ebe8c4b8e7\",\"vout\":1}]" "{\"data\":\"004D6F6F6E427269780000000104004D6F6E6F\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":1.98947650}"
+
+
+# Inscribe overload, Kotia max OP_RETURN size between 28000 & 30720, try 30720 -> fail, try 28672 -> ?? -> fixed to 20000
+createrawtransaction "[{\"txid\":\"cbbf04b69d05c486ffbee8794a1de77a87df42848efe79855b1bbeaafc3ac871\",\"vout\":1}]" "{\"data\":\"\", \"KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx\":1.98647650}"
+
+
+
+# create new Folder www within root of 19.55.66.132.MoonBrix -> subaction missing
+createrawtransaction "[{\"txid\":\"f349be58f0b6ea0b026b0718c45670296bcc3a8c40241f86cc795679f816ef53\",\"vout\":1}]" "{\"data\":\"004d6f6f6e42726978133742840600000000000000000000000000777777\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":6.77230000}"
+
+# create new Folder www within root of 19.55.66.132.MoonBrix
+createrawtransaction "[{\"txid\":\"95354a9caf3a68c0c333dca49c11b84ec2b32f56ece7426702b1f59325181115\",\"vout\":1}]" "{\"data\":\"004d6f6f6e4272697813374284060000000000000000000000000000777777\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":6.77220000}"
+
+
+# delete Broken file Genesi in root of 19.55.66.132.MoonBrix
+createrawtransaction "[{\"txid\":\"d77ee1994f80237b387251634b6c8b0d39fddd659bc917dc4f63c86fd3d488df\",\"vout\":1}]" "{\"data\":\"004d6f6f6e427269781337428407000100000000000000000047656e657369\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":6.77210000}"
+
+# recreate file Genesis in root/www of 19.55.66.132.MoonBrix and add the Doctor => wrong subaction....
+createrawtransaction "[{\"txid\":\"edde0a1b5180cc9fdc8eff358e868251f95c7c80a957cd5c6b4f3bd3f5428a00\",\"vout\":1}]" "{\"data\":\"004d6f6f6e4272697813374284070001000000000000000047656e6573697300000000000000000000000077777735336463646265396330643434643865393263643034633963386236326261393036343466383035366138643863326132373432616433366337386137653031\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":6.77200000}"
+
+# again => TXIDs are HEX!!! dont convert again into HEX
+createrawtransaction "[{\"txid\":\"9b7af177c8d43109c1d49c3c2d6d9d0b9832cbdb5a2e4e89362651d613ebe697\",\"vout\":1}]" "{\"data\":\"004d6f6f6e4272697813374284070000000000000000000047656e6573697300000000000000000000000077777735336463646265396330643434643865393263643034633963386236326261393036343466383035366138643863326132373432616433366337386137653031\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":6.77190000}"
+
+# again => seems to be okay! another Genesis File gets created with no content in root, guess from something above
+createrawtransaction "[{\"txid\":\"be27cf4d9470ec9f7790cdd8e0e2cba87137e9241420d310c552c31ca3158610\",\"vout\":1}]" "{\"data\":\"004d6f6f6e4272697813374284070000000000000000000047656e6573697300000000000000000000000077777753dcdbe9c0d44d8e92cd04c9c8b62ba90644f8056a8d8c2a2742ad36c78a7e01\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":6.77180000}"
+
+# delete file Genesis in root of 19.55.66.132.MoonBrix => WORKED!
+createrawtransaction "[{\"txid\":\"40e0305b99860c06fd45cb464b9db03378aa05eb3cb780ec6a4279d65ecd1917\",\"vout\":1}]" "{\"data\":\"004d6f6f6e4272697813374284070001000000000000000047656e65736973\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":6.77170000}"
+
+
+# create Property MoonBrix $MBX => Action wrong => File has been created
+createrawtransaction "[{\"txid\":\"a76fbaf7328fd66ede616b2c728315a8c9077296b40be4c6253b77d70e8f17d7\",\"vout\":1}]" "{\"data\":\"004d6f6f6e427269781337428407000000000000000000000000000000004d6f6f6e4272697800004d425853dcdbe9c0d44d8e92cd04c9c8b62ba90644f8056a8d8c2a2742ad36c78a7e01000000000501BD00\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":9.99990000}"
+
+OP HEX
+004d6f6f6e427269781337428407000000000000000000000000000000004d6f6f6e4272697800004d425853dcdbe9c0d44d8e92cd04c9c8b62ba90644f8056a8d8c2a2742ad36c78a7e01000000000501BD00
+
+
+004d6f6f6e42726978 TLD
+13374284 IP
+07 Action
+00 Table
+00 Subaction
+00 Define
+000000000000000000000000004d6f6f6e42726978 Name
+00004d4258 Ticker
+53dcdbe9c0d44d8e92cd04c9c8b62ba90644f8056a8d8c2a2742ad36c78a7e01 GrantData
+000000000501BD00 Supply
+
+
+# retry => Property creation changed => removed pointer to GrantData, Reason excited 80 BYTES range => Property creted but not as planed, Supply dont match
+createrawtransaction "[{\"txid\":\"610f5bc91fa01cd4797010191c20e7504f4acd9e7b8b938f74917a62768e3d06\",\"vout\":1}]" "{\"data\":\"004d6f6f6e427269781337428408000000000000000000000000000000004d6f6f6e4272697800004d425853dcdbe9c0d44d8e92cd04c9c8b62ba90644f8056a8d8c2a2742ad36c78a7e01000000000501BD00\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":9.99980000}"
+
+
+
+
+# try move tokens from Property MoonBrix ⟘MBX => worked
+createrawtransaction "[{\"txid\":\"a9945e3c0ad3d9569a69ddde41e9b1346e36dee935ab4a16ccb4a50f673a3209\",\"vout\":1}]" "{\"data\":\"004d6f6f6e427269781337428409000000004d42580000000000000064\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":9.9996, \"Kst97oPhdumeW4hdj6MryENzuRcbABBK3g\":0.0001}"
+
+
+
+# create Property Mono ⟘Mono, divisible, not fixed => worked
+createrawtransaction "[{\"txid\":\"df2023ce4294241b1ba9a621a894420ef65bcf7e82f79c287e7bbfb3fdb271a6\",\"vout\":1}]" "{\"data\":\"004d6f6f6e42726978133742840800000300000000000000000000000000000000004d6f6e6f004d6f6e6f\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":9.9995}"
+
+
+004d6f6f6e42726978 TLD
+13374284 IP
+08 Action
+00 Table
+00 Subaction
+03 Define
+00000000000000000000000000000000004d6f6e6f Name
+004d6f6e6f Ticker
+
+# mint Token to ⟘MONO
+createrawtransaction "[{\"txid\":\"ec5d246772a773f3361b88feaa901cbb7ca0badb58a75910392940c22b78a8b5\",\"vout\":1}]" "{\"data\":\"004d6f6f6e4272697813374284090001004d6f6e6f000000000501BD00\", \"KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1\":9.9994}"
+
+
+004d6f6f6e42726978 TLD
+13374284 IP
+09 Action
+00 Table
+01 Subaction
+004d6f6e6f Ticker
+000000000501BD00 Supply
+
+
+

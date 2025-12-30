@@ -1,0 +1,33 @@
+[
+    {
+        "Divisible": false,
+        "Fixed": true,
+        "Fungible": true,
+        "GrantData": "",
+        "Holder": {
+            "KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1": 6042946597033364778,
+            "Kst97oPhdumeW4hdj6MryENzuRcbABBK3g": 100
+        },
+        "Key": "004d6f6f6e4272697813374284",
+        "Name": "MoonBrix",
+        "Owner": "KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1",
+        "OwnerData": "",
+        "Supply": 6042946597033364878,
+        "Ticker": "MBX"
+    },
+    {
+        "Divisible": true,
+        "Fixed": false,
+        "Fungible": true,
+        "GrantData": "",
+        "Holder": {
+            "KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1": 84000000
+        },
+        "Key": "004d6f6f6e4272697813374284",
+        "Name": "Mono",
+        "Owner": "KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1",
+        "OwnerData": "",
+        "Supply": 84000000,
+        "Ticker": "MONO"
+    }
+]

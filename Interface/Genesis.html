@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="JS/Nakamoto.js"></script>
+    <script src="JS/Executer.js"></script>
+    <script src="JS/Genesis.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100dvh;
+            width: 100dvw;
+        }
+        body {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p id="KotiaCon" style="color: red;">TARDIS not connected or bad request</p>
+        <button id="SyncStart" onclick="SyncStart()" disabled>StartSync</button>
+        <button id="SyncStop" onclick="SyncStop()" disabled>StopSync</button>
+        <button id="Shutdown" onclick="Shutdown()" disabled>Shutdown MoonBrix Core</button>
+        <br><br>
+
+        <label>Search: </label>
+        <select id="searchWhat">
+            <option value="domain">Domain</option>
+            <option value="tld">TLD</option>
+            <option value="ip">IP</option>
+            <option value="property">Property</option>
+            <option value="address">Address</option>
+        </select>
+        <input id="search">
+        <button onclick="Get()">Get Data</button>
+        <br><br>
+
+        <label>Address: </label>
+        <select id="address">
+            <option value="null">No Address found</option>
+        </select>
+        <br><br>
+
+        <div id="execute-menu">
+            <label for="Action">Aktion auswählen:</label>
+            <select id="Action">
+                <option value="00TLD">Claim TLD</option>
+                <option value="00IP">Claim IP</option>
+                <option value="01">Change TLD Owner</option>
+                <option value="02">Change Listtype</option>
+            </select>
+            <button onclick="Execute()">Execute</button>
+        </div>
+        <br>
+        <div id="execute-expand">
+        </div>
+    </header>
+
+    <main>
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+[
+    {
+        "Ascii": "MoonBrix",
+        "Block": 1238264,
+        "Hex": "004d6f6f6e42726978",
+        "IPs": [
+            [
+                "00000001",
+                "KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx",
+                "Mono"
+            ],
+            [
+                "13374284",
+                "KYVGWnaFyfVAQUH9mkwscaALN9b6e2VgF1",
+                ""
+            ]
+        ],
+        "List": [
+            "Kd9KMUgzueKKnV96aE6UurzBV5xTfcfMtk"
+        ],
+        "Owner": "KnYgx4rC7ETuRK4rJ91oFoTTJoZe9T2jkx",
+        "TXID": "a68d0e0e5534a6a6d43f3d70ecb089cc4b639af2056831e22121b6cb8b6ad71c",
+        "Type": "blacklist"
+    }
+]

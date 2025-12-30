@@ -1,0 +1,18 @@
+{
+    "ahead": {
+        "filehash": "3f286dd8d14cd76c04fc410a028584d1991ccc5e228e2aacc377dff7be55bb97",
+        "height": 99999,
+        "prevfilehash": "b80add0bb692d16bc6d111dd3a278d8cbb1d57ba470ade56f12355ec51a4952b",
+        "tx": 0
+    },
+    "data": [
+        {
+            "height": 90000,
+            "tx": []
+        },
+        {
+            "height": 99999,
+            "tx": []
+        }
+    ]
+}

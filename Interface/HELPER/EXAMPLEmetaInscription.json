@@ -1,0 +1,13 @@
+{
+    "name":"TestInscription",
+    "type":"image/jpg",
+    "next":false,
+    "chunks":[
+        "0006b8d09215d1377440f42cc55233842925884919cf7d12228abb1cdb727003",
+        "85f46c6fe444b1ef49f36a6a0e3d9cb1c0300d8a65fead719febd90f5cb060ad",
+        "fb1c18b635883436e23f0c7dd7d97d27c8d9718ed1285d9465784c61c743c775",
+        "a69762723c5dba5e428f577e145bb0217c10e3a7273efa99ea163638be617964",
+        "d96cb53a60e6c6bc43f56e412016935c42391c1fc544feb38533573856c2a902",
+        "b5b4b255ec48c2769b223017214cef2d6e2c7e876e67e38f275da1abc1bf71cc"
+    ]
+}
